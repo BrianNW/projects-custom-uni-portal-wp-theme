@@ -1,4 +1,5 @@
 <?php
+get_header();
       // wordpress function, tells WP while there are posts, post them.
       while(have_posts()) {
  
@@ -11,4 +12,6 @@
         <?php the_content(); ?>
       <?php }
  
+ get_footer();
+
 ?>
