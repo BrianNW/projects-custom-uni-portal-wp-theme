@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <?php wp_head(); ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,3 @@
     <title>Uni Portal</title>
 </head>
 <body>
-    
-</body>
-</html>
