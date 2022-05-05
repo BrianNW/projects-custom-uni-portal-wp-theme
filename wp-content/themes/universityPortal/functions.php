@@ -11,4 +11,10 @@ function university_files() {
 }
 // call function
 add_action('wp_enqueue_scripts', 'university_files');
+
+// Setup dynamic title call
+function uni_features(){
+    add_theme_support('title-tag');
+}
+add_action('after_setup_theme', 'uni_features');
 ?>
