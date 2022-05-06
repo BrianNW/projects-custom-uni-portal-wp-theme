@@ -16,7 +16,11 @@ get_header();
     </div>
 
     <div class="container container--narrow page-section">
-      <div class="metabox metabox--position-up metabox--with-home-link">
+
+    <?php
+      if(wp_get_post_parent_id(get_the_ID())) { ?>
+        
+        <div class="metabox metabox--position-up metabox--with-home-link">        
         <p>
           <!-- breadcrumb box -->
           <a class="metabox__blog-home-link" href="#">
@@ -24,6 +28,10 @@ get_header();
           <span class="metabox__main"><?php the_title(); ?></span>
         </p>
       </div>
+     <?php }     
+    ?>
+
+     
 
       <!-- <div class="page-links">
         <h2 class="page-links__title"><a href="#">About Us</a></h2>
