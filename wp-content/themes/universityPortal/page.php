@@ -20,13 +20,13 @@ get_header();
     <?php
       //if is a child page, get the parent's post ID
       if(wp_get_post_parent_id(get_the_ID())) { ?>
-      
+
         <!-- Display the breadcrumb box -->
         <div class="metabox metabox--position-up metabox--with-home-link">        
         <p>
           <!-- breadcrumb box -->
-          <a class="metabox__blog-home-link" href="#">
-          <i class="fa fa-home" aria-hidden="true"></i> Back to About Us</a> 
+          <a class="metabox__blog-home-link" href="<?php echo ""  ?>">
+          <i class="fa fa-home" aria-hidden="true"></i> Back to <?php echo get_the_title(x); ?></a> 
           <span class="metabox__main"><?php the_title(); ?></span>
         </p>
       </div>
