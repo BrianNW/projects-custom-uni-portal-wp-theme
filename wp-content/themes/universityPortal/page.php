@@ -21,7 +21,7 @@ get_header();
       
       $theParentPID = wp_get_post_parent_id(get_the_ID());
       //if is a child page, get the parent's post ID
-      if(wp_get_post_parent_id(get_the_ID())) { ?>
+      if($theParentPID) { ?>
 
         <!-- Display the breadcrumb box -->
         <div class="metabox metabox--position-up metabox--with-home-link">        
