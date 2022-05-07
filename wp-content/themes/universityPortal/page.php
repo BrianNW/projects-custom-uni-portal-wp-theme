@@ -18,6 +18,8 @@ get_header();
     <div class="container container--narrow page-section">
 
     <?php
+      
+      $theParentPID = wp_get_post_parent_id(get_the_ID());
       //if is a child page, get the parent's post ID
       if(wp_get_post_parent_id(get_the_ID())) { ?>
 
