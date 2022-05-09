@@ -18,6 +18,8 @@ get_header();
     <div class="container container--narrow page-section">
 
     <?php
+      //PID = Post ID
+
       // variable that stores parent posts's ID fetch
       $theParentPID = wp_get_post_parent_id(get_the_ID());
       //if is a child page, get the parent's post ID
@@ -44,9 +46,11 @@ get_header();
           <li><a href="#">Our Goals</a></li> -->
           <?php
           // Needs to patch the variable made above to get parent Post ID
+          // Only if the current page has a parent PID.  If viewing a parent page, the argument below will evaluate to false.
            if($theParentPID) {
             $findChildrenOf = $theParentPID;
               } else {
+                // else, assign the children id to the curren id the page is using
                 $findChildrenOf = get_the_ID();
               }
           
