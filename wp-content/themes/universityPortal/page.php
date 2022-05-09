@@ -43,8 +43,9 @@ get_header();
           <!-- <li class="current_page_item"><a href="#">Our History</a></li>
           <li><a href="#">Our Goals</a></li> -->
           <?php
-           if($theParent) {
-            $findChildrenOf = $theParent;
+          // Needs to patch the variable made above to get parent Post ID
+           if($theParentPID) {
+            $findChildrenOf = $theParentPID;
               } else {
                 $findChildrenOf = get_the_ID();
               }
