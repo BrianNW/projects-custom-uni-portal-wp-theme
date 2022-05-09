@@ -38,6 +38,14 @@ get_header();
     ?>
 
      
+      <!-- SIDE NAV MENU -->
+        <!-- only display this menu if you are on a child page -->
+      <?php 
+      $testArray = get_pages(array(
+        'child_of' => get_the_ID()
+      ));      
+      //if the page has a parent or is a parent
+      if($theParentPID || $testArray) { ?>
 
       <div class="page-links">
         <h2 class="page-links__title"><a href="<?php echo get_permalink($theParentPID); ?>"><?php echo get_the_title($theParentPID);?></a></h2>
@@ -56,11 +64,12 @@ get_header();
           
           wp_list_pages(array(
             'title_li' => NULL,
-            'child_of' => $findChildrenOf
+            'child_of' => $findChildrenOf,
           )); 
           ?>
         </ul>
       </div>
+      <?php } ?>
 
       <div class="generic-content">
         <?php the_content(); ?>
