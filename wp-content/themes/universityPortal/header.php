@@ -9,7 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Uni Portal</title>
 </head>
-<body>
+
+<!-- Let wordpress update the body classes -->
+<body <?php body_class(); ?>>
 
     <header class="site-header">
         <div class="container">
