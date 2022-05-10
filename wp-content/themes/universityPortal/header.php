@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<!-- dynamically set language settings -->
 <html <?php language_attributes(); ?>>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
-    <meta charset="UTF-8">
+    <!-- dynamically set charset type -->
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Uni Portal</title>
 </head>
