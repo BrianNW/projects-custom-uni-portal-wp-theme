@@ -12,9 +12,10 @@ function university_files() {
 // call function
 add_action('wp_enqueue_scripts', 'university_files');
 
-// Setup dynamic title call
+// Setup dynamic title call and register nav menus
 function uni_features(){
     register_nav_menu('headerMenuLocation', 'Header Menu Location');
+    register_nav_menu('footerLocationOne', 'Header Menu Location');
     add_theme_support('title-tag');
 }
 
