@@ -10,7 +10,11 @@ get_header(); ?>
           <p>Keep up with the latest news.</p>
         </div>
       </div>
-    </div>
+</div>
+
+  <div class="container container--narrow page-section">
+
+  </div>
 
 <?php get_footer();
 
