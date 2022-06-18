@@ -18,7 +18,7 @@ get_header();
             <div class="container container--narrow page-section">
               Metabox will go here
 
-              <div class="generic-content"></div>
+              <div class="generic-content"><?php the_content(); ?></div>
           </div>
 
       <?php }
