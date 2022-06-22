@@ -52,7 +52,11 @@ get_header();
             'posts_per_page' => 2
           ));
 
-          
+          // loop references custom query above
+            while($homepagePosts->have_posts()) {
+              $homepagePosts->the_post(); ?>
+            <li> <?php the_title(); ?></li>
+           <?php }
           ?>
 
           <div class="event-summary">
