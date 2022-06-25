@@ -21,4 +21,10 @@ function uni_features(){
 }
 
 add_action('after_setup_theme', 'uni_features');
+
+
+
+add_action('init', 'university_post_types');
+
 ?>
+
