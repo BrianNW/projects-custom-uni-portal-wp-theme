@@ -24,6 +24,13 @@ get_header();
               'post_type' => 'event'
             ));
 
+            // this custom query will keep looping while there are posts to loop through
+            while($homepageEvents-> have_posts()) {
+              $homepageEvents->the_post(); ?>
+              <li><?php the_title(); ?> </li>
+              <?php }
+            
+
           ?>
           <div class="event-summary">
             <a class="event-summary__date t-center" href="#">
