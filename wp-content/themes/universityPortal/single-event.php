@@ -20,8 +20,8 @@ get_header();
               <p>
                 <!-- breadcrumb box -->
                 <a class="metabox__blog-home-link" href="<?php echo site_url('/blog'); ?>">
-                <i class="fa fa-home" aria-hidden="true"></i> Blog Home </a> 
-                <span class="metabox__main">Posted by <?php the_author_posts_link(); ?> on <?php the_time('n.j.y'); ?> in <?php get_the_category_list(', '); ?></span>
+                <i class="fa fa-home" aria-hidden="true"></i> Events Home </a> 
+                <span class="metabox__main"><?php the_title(); ?> on <?php the_time('n.j.y'); ?> in <?php get_the_category_list(', '); ?></span>
               </p>
             </div>
 
