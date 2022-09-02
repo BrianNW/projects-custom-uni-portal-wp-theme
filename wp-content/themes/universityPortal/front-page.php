@@ -70,7 +70,8 @@ get_header();
               <!-- Old : echo wp_trim_words(get_the_content(), 18);  -->
               <!-- To add a default custom post excerpt: the_excerpt(); -->
               <p><?php if(has_excerpt()){
-                          the_excerpt();
+                        // Use echo get_the_excerpt instead of the_excerpt, as this fixes vertical gap issues
+                          echo get_the_excerpt();
                         }else {
                           echo wp_trim_words(get_the_content(), 18);
                         }
